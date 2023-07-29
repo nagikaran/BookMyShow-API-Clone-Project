@@ -1,0 +1,21 @@
+package com.example.demo.service;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.dto.CustomerDto;
+import com.example.demo.entity.Customer;
+import com.example.demo.serviceinterface.CustomerServiceInterface;
+
+import jakarta.validation.Valid;
+
+@Service
+public class CustomerService implements CustomerServiceInterface {
+
+	@Override
+	public ResponseEntity<CustomerDto> saveCustomer(@Valid Customer customer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
