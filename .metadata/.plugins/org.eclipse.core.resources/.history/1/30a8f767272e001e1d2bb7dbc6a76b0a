@@ -1,0 +1,14 @@
+package com.example.demo.constants;
+
+public interface UrlPaths {
+	/*base url of the verion 1*/
+	final String APPLICATION_BASE_VERSION="api/v1";
+	
+	/*Url for the customer class*/
+	final String CUSTOMER_CLASS_URL="/customer";
+	
+	/*url to save the details of the customer*/
+	
+	final String customerDetailSave="/customerDetails";
+
+}
