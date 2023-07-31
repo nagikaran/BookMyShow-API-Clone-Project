@@ -18,14 +18,16 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
-	
+
 	@Autowired
 	CustomerServiceInterface customerService;
-	
+
 	@PostMapping
 	public ResponseEntity<String> saveCustomer(@Valid @RequestBody Customer customer) {
-		 CustomerDto saveCustomer = customerService.saveCustomer(customer);
-		 return saveCustomer!=null?ResponseEntity.status(HttpStatus.CREATED).body("Data added success fully"):ResponseEntity.status(HttpStatus.CREATED).body("failed to save the data");
+		CustomerDto saveCustomer = customerService.saveCustomer(customer);
+		return saveCustomer != null ? ResponseEntity.status(HttpStatus.CREATED).body("Data added success fully")
+				: ResponseEntity.status(HttpStatus.CREATED).body("failed to save the data");
 	}
+	/* API to get the customer details as per the id */
 
 }
